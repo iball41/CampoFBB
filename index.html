@@ -17,6 +17,7 @@
     --gray-lt:   #e8eaef;
     --gray-mid:  #9aa0b0;
     --text:      #1a1a2e;
+    --sticky-h:  54px;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -66,11 +67,19 @@
     margin-top: 5px;
   }
 
-  /* ── NAV ── */
+  /* ── STICKY NAV ── */
   nav {
     background: var(--navy-mid);
-    padding: 10px 16px 14px;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 16px;
+    height: var(--sticky-h);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
   }
   .nav-eyebrow {
     font-family: 'Barlow Condensed', sans-serif;
@@ -79,7 +88,8 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.4);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    line-height: 1;
   }
   .nav-pills {
     display: flex;
@@ -95,12 +105,19 @@
     text-transform: uppercase;
     color: var(--white);
     text-decoration: none;
-    padding: 7px 20px;
+    padding: 6px 18px;
     border-radius: 20px;
     background: var(--red);
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.1s;
   }
-  .nav-pills a:hover { background: var(--red-dark); }
+  .nav-pills a:hover {
+    background: var(--red-dark);
+    transform: translateY(-1px);
+  }
+  .nav-pills a.active {
+    background: var(--white);
+    color: var(--navy);
+  }
 
   /* ── MAIN ── */
   main {
@@ -133,7 +150,7 @@
     margin-bottom: 24px;
   }
 
-  /* ── QUOTE: OPTION 1 HERO ── */
+  /* ── QUOTE HERO ── */
   .quote-hero {
     text-align: center;
     padding: 2rem 1.5rem;
@@ -160,13 +177,12 @@
     margin: 0 auto;
   }
 
-  /* ── PRINCIPLES: stacked mobile, 3-col desktop ── */
+  /* ── PRINCIPLES GRID ── */
   .principles-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 14px;
   }
-
   .principle {
     background: var(--white);
     border-radius: 8px;
@@ -267,7 +283,6 @@
   .scheme-toggle:hover { background: var(--navy-mid); }
   .scheme-toggle.open { background: var(--red); }
   .scheme-toggle.open:hover { background: var(--red-dark); }
-
   .chevron {
     font-size: 0.75rem;
     color: rgba(255,255,255,0.6);
@@ -276,7 +291,6 @@
     margin-left: 12px;
   }
   .scheme-toggle.open .chevron { transform: rotate(180deg); }
-
   .scheme-content {
     display: none;
     background: var(--white);
@@ -297,7 +311,6 @@
     border-radius: 6px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.15);
   }
-
   .coming-soon {
     text-align: center;
     font-family: 'Barlow Condensed', sans-serif;
@@ -323,16 +336,10 @@
     border-top: 3px solid var(--red);
   }
 
-  /* ── DESKTOP BREAKPOINT ── */
+  /* ── DESKTOP ── */
   @media (min-width: 768px) {
-    main {
-      max-width: 1100px;
-      padding: 44px 32px 80px;
-    }
-    .principles-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      align-items: stretch;
-    }
+    main { max-width: 1100px; padding: 44px 32px 80px; }
+    .principles-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
     .quote-hero p { font-size: 1.5rem; }
     .court-wrap { max-width: 320px; }
     header h1 { font-size: 2.4rem; }
@@ -354,18 +361,18 @@
   <h2>Freshman Basketball &nbsp;&middot;&nbsp; Players' Playbook &nbsp;&middot;&nbsp; Summer 2025</h2>
 </header>
 
-<nav>
+<nav id="sticky-nav">
   <div class="nav-eyebrow">Jump to &rarr;</div>
   <div class="nav-pills">
-    <a href="#philosophy">Philosophy</a>
-    <a href="#offense">Offense</a>
-    <a href="#defense">Defense</a>
+    <a href="#philosophy" data-section="philosophy">Philosophy</a>
+    <a href="#offense" data-section="offense">Offense</a>
+    <a href="#defense" data-section="defense">Defense</a>
   </div>
 </nav>
 
 <main>
 
-  <!-- SECTION 1: PHILOSOPHY -->
+  <!-- SECTION 1 -->
   <div class="section-block" id="philosophy">
     <div class="section-eyebrow">Section 1</div>
     <div class="section-title">Coaching Philosophy</div>
@@ -377,7 +384,6 @@
     </div>
 
     <div class="principles-grid">
-
       <div class="principle">
         <div class="principle-header">
           <span class="p-num">&#9312;</span>
@@ -421,11 +427,10 @@
           <div class="goal-line"><span class="star">&#9733;</span> <strong>Emphasis =</strong>&nbsp;no strong-hand, ball pressure, close-outs, &amp; help defense.</div>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- SECTION 2: OFFENSIVE SCHEMES -->
+  <!-- SECTION 2 -->
   <div class="section-block" id="offense">
     <div class="section-eyebrow">Section 2</div>
     <div class="section-title">Offensive Schemes</div>
@@ -487,7 +492,7 @@
     </div>
   </div>
 
-  <!-- SECTION 3: DEFENSIVE SCHEMES -->
+  <!-- SECTION 3 -->
   <div class="section-block" id="defense">
     <div class="section-eyebrow">Section 3</div>
     <div class="section-title">Defensive Schemes</div>
@@ -534,6 +539,38 @@
     btn.classList.toggle('open', !isOpen);
     content.classList.toggle('visible', !isOpen);
   }
+
+  // Smooth scroll with offset for sticky nav
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      var navH = document.getElementById('sticky-nav').offsetHeight;
+      var top = target.getBoundingClientRect().top + window.scrollY - navH - 12;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+
+  // Highlight active nav pill based on scroll position
+  var sections = ['philosophy', 'offense', 'defense'];
+  var navLinks = document.querySelectorAll('.nav-pills a');
+
+  function updateActive() {
+    var navH = document.getElementById('sticky-nav').offsetHeight;
+    var scrollY = window.scrollY + navH + 24;
+    var current = sections[0];
+    sections.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el && el.offsetTop <= scrollY) current = id;
+    });
+    navLinks.forEach(function(a) {
+      a.classList.toggle('active', a.getAttribute('data-section') === current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
 </script>
 
 </body>
