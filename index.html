@@ -360,6 +360,39 @@
     }
     .court-wrap { max-width: 320px; }
   }
+
+  /* ── PLAY DIAGRAM ── */
+  .play-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .play-diagram img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    display: block;
+  }
+  .play-link {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--navy);
+    text-decoration: none;
+    padding: 9px 22px;
+    border-radius: 20px;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .play-link:hover {
+    background: var(--red);
+    transform: translateY(-1px);
+  }
 </style>
 </head>
 <body>
@@ -461,26 +494,10 @@
         Offense 1 <span class="chevron">&#9660;</span>
       </button>
       <div class="scheme-content">
-        <div class="court-wrap"><svg viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg">
-  <rect width="280" height="300" fill="#d4a84b" rx="4"/>
-  <rect x="10" y="10" width="260" height="280" fill="none" stroke="#0D1F4E" stroke-width="2.5"/>
-  <rect x="95" y="10" width="90" height="115" fill="rgba(13,31,78,0.12)" stroke="#0D1F4E" stroke-width="2"/>
-  <path d="M 95 125 A 45 45 0 0 0 185 125" fill="none" stroke="#0D1F4E" stroke-width="2" stroke-dasharray="5,4"/>
-  <path d="M 95 125 A 45 45 0 0 1 185 125" fill="none" stroke="#0D1F4E" stroke-width="2"/>
-  <circle cx="140" cy="28" r="5" fill="none" stroke="#C8102E" stroke-width="2"/>
-  <line x1="120" y1="18" x2="160" y2="18" stroke="#C8102E" stroke-width="2.5"/>
-  <path d="M 116 28 A 24 24 0 0 0 164 28" fill="none" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="27" y1="10" x2="27" y2="78" stroke="#0D1F4E" stroke-width="2"/>
-  <line x1="253" y1="10" x2="253" y2="78" stroke="#0D1F4E" stroke-width="2"/>
-  <path d="M 27 78 A 113 113 0 0 0 253 78" fill="none" stroke="#0D1F4E" stroke-width="2"/>
-  <line x1="95" y1="55"  x2="85" y2="55"  stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="185" y1="55" x2="195" y2="55" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="95" y1="80"  x2="85" y2="80"  stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="185" y1="80" x2="195" y2="80" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="95" y1="100" x2="85" y2="100" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="185" y1="100" x2="195" y2="100" stroke="#0D1F4E" stroke-width="1.5"/>
-</svg></div>
-        <p class="coming-soon">&#8987; Plays will be updated soon</p>
+        <div class="play-diagram">
+          <img src="https://d25g0k1jyinm1g.cloudfront.net/play_lambda/pUKJUSNo78/1781206833000.png" alt="Man Offense 1 play diagram" />
+          <a class="play-link" href="https://thehoopsgeek.com/play/pUKJUSNo78" target="_blank" rel="noopener">&#9654; View Full Animation</a>
+        </div>
       </div>
     </div>
 
