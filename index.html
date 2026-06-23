@@ -57,7 +57,6 @@
     line-height: 1.1;
     white-space: nowrap;
   }
-  /* Subtitle: single line, scales down on narrow screens */
   header h2 {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 600;
@@ -106,29 +105,17 @@
     background: var(--red);
     transition: background 0.2s, transform 0.1s;
     white-space: nowrap;
-    /* Scale fluidly: comfortable on desktop, compact on mobile portrait */
-    font-size: clamp(0.65rem, 2.5vw, 0.85rem);
-    padding: clamp(4px, 1.2vw, 7px) clamp(10px, 3vw, 20px);
+    font-size: clamp(0.6rem, 2.3vw, 0.85rem);
+    padding: clamp(4px, 1.2vw, 7px) clamp(8px, 2.5vw, 20px);
   }
-  .nav-pills a:hover {
-    background: var(--red-dark);
-    transform: translateY(-1px);
-  }
-  .nav-pills a.active {
-    background: var(--white);
-    color: var(--navy);
-  }
+  .nav-pills a:hover { background: var(--red-dark); transform: translateY(-1px); }
+  .nav-pills a.active { background: var(--white); color: var(--navy); }
 
   /* ── MAIN ── */
-  main {
-    max-width: 740px;
-    margin: 0 auto;
-    padding: 28px 14px 64px;
-  }
+  main { max-width: 740px; margin: 0 auto; padding: 28px 14px 64px; }
 
   /* ── SECTION BLOCK ── */
   .section-block { margin-bottom: 48px; }
-
   .section-eyebrow {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 700;
@@ -159,12 +146,7 @@
     border-radius: 10px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.07);
   }
-  .quote-accent {
-    width: 44px;
-    height: 3px;
-    background: var(--red);
-    margin: 0 auto;
-  }
+  .quote-accent { width: 44px; height: 3px; background: var(--red); margin: 0 auto; }
   .quote-accent.top { margin-bottom: 1.1rem; }
   .quote-accent.bottom { margin-top: 1.1rem; }
   .quote-hero p {
@@ -178,11 +160,7 @@
   }
 
   /* ── PRINCIPLES GRID ── */
-  .principles-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
+  .principles-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
   .principle {
     background: var(--white);
     border-radius: 8px;
@@ -218,12 +196,7 @@
     text-underline-offset: 3px;
     line-height: 1.25;
   }
-  .principle-body {
-    padding: 12px 14px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
+  .principle-body { padding: 12px 14px; flex: 1; display: flex; flex-direction: column; }
   .principle-body ul { list-style: none; flex: 1; }
   .principle-body ul li {
     font-size: 0.88rem;
@@ -242,8 +215,6 @@
     font-size: 0.7rem;
     top: 8px;
   }
-
-  /* ── GOAL LINE: fixed layout so it never breaks weirdly ── */
   .goal-line {
     margin-top: 12px;
     font-size: 0.84rem;
@@ -257,24 +228,12 @@
     align-items: baseline;
     gap: 0 6px;
   }
-  .goal-line .star {
-    color: var(--red);
-    font-size: 0.9rem;
-    line-height: 1;
-  }
+  .goal-line .star { color: var(--red); font-size: 0.9rem; line-height: 1; }
   .goal-line .label { white-space: nowrap; }
-  .goal-line .value {
-    font-weight: 400;
-    color: var(--text);
-  }
+  .goal-line .value { font-weight: 400; color: var(--text); }
 
   /* ── SCHEME ACCORDION ── */
-  .scheme-group {
-    margin-bottom: 10px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.09);
-  }
+  .scheme-group { margin-bottom: 10px; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 5px rgba(0,0,0,0.09); }
   .scheme-toggle {
     width: 100%;
     background: var(--navy);
@@ -296,34 +255,14 @@
   .scheme-toggle:hover { background: var(--navy-mid); }
   .scheme-toggle.open { background: var(--red); }
   .scheme-toggle.open:hover { background: var(--red-dark); }
-  .chevron {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.6);
-    transition: transform 0.25s ease;
-    flex-shrink: 0;
-    margin-left: 12px;
-  }
+  .chevron { font-size: 0.75rem; color: rgba(255,255,255,0.6); transition: transform 0.25s ease; flex-shrink: 0; margin-left: 12px; }
   .scheme-toggle.open .chevron { transform: rotate(180deg); }
-  .scheme-content {
-    display: none;
-    background: var(--white);
-    padding: 20px 16px 16px;
-  }
+  .scheme-content { display: none; background: var(--white); padding: 20px 16px 16px; }
   .scheme-content.visible { display: block; }
 
   /* ── COURT ── */
-  .court-wrap {
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-  }
-  .court-wrap svg {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  }
+  .court-wrap { width: 100%; max-width: 360px; margin: 0 auto; }
+  .court-wrap svg { width: 100%; height: auto; display: block; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.15); }
   .coming-soon {
     text-align: center;
     font-family: 'Barlow Condensed', sans-serif;
@@ -337,44 +276,9 @@
     border-top: 1px dashed var(--gray-lt);
   }
 
-  /* ── FOOTER ── */
-  footer {
-    background: var(--navy);
-    color: var(--gray-mid);
-    text-align: center;
-    padding: 18px 16px;
-    font-size: 0.75rem;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    border-top: 3px solid var(--red);
-  }
-
-  /* ── DESKTOP (768px+) ── */
-  @media (min-width: 768px) {
-    header { padding: 28px 24px 20px; }
-    header img { width: 72px; }
-    main { max-width: 1100px; padding: 44px 32px 80px; }
-    .principles-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      align-items: stretch;
-    }
-    .court-wrap { max-width: 320px; }
-  }
-
   /* ── PLAY DIAGRAM ── */
-  .play-diagram {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-  }
-  .play-diagram img {
-    width: 100%;
-    max-width: 480px;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-    display: block;
-  }
+  .play-diagram { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .play-diagram img { width: 100%; max-width: 480px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); display: block; }
   .play-link {
     display: inline-block;
     font-family: 'Barlow Condensed', sans-serif;
@@ -389,16 +293,318 @@
     border-radius: 20px;
     transition: background 0.2s, transform 0.1s;
   }
-  .play-link:hover {
-    background: var(--red);
-    transform: translateY(-1px);
+  .play-link:hover { background: var(--red); transform: translateY(-1px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    color: var(--gray-mid);
+    text-align: center;
+    padding: 18px 16px;
+    font-size: 0.75rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    border-top: 3px solid var(--red);
+  }
+
+  /* ── VIDEO BLOCK ── */
+  .video-block {
+    margin-bottom: 24px;
+  }
+  .video-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    background: #000;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+  .video-placeholder {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--navy);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  }
+  .video-placeholder-inner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .video-icon {
+    font-size: 2.5rem;
+    color: var(--red);
+    line-height: 1;
+  }
+  .video-placeholder-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .video-placeholder-sub {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.75rem;
+    color: var(--gray-mid);
+  }
+  .video-hint {
+    font-size: 0.72rem;
+    color: var(--gray-mid);
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  /* ── STATS SECTION ── */
+  .stats-meta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    margin-bottom: 16px;
+  }
+
+  /* Stats sub-tabs */
+  .stats-tabs {
+    display: flex;
+    margin-bottom: 16px;
+    border: 1.5px solid var(--navy);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .stats-tab {
+    flex: 1;
+    padding: 9px 6px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.65rem, 2.5vw, 0.85rem);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--navy);
+    background: var(--white);
+    border: none;
+    border-right: 1.5px solid var(--navy);
+    transition: background 0.2s, color 0.2s;
+    text-align: center;
+  }
+  .stats-tab:last-child { border-right: none; }
+  .stats-tab.active { background: var(--navy); color: var(--white); }
+  .stats-tab:hover:not(.active) { background: var(--gray-lt); }
+
+  .stats-panel { display: none; }
+  .stats-panel.active { display: block; }
+
+  /* Stats tables */
+  .stats-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11.5px;
+    border-left: 2px solid var(--navy);
+    border-right: 2px solid var(--navy);
+    min-width: 480px;
+  }
+  .stats-table th {
+    padding: 4px 6px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    color: var(--gray-mid);
+    border-bottom: 1px solid var(--gray-lt);
+    white-space: nowrap;
+    text-align: center;
+    background: var(--off-white);
+    letter-spacing: 0.04em;
+  }
+  .stats-table th.L { text-align: left; }
+  .stats-table th.grp {
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--gray-lt);
+  }
+  .stats-table .bl { border-left: 1px solid var(--gray-lt); }
+  .stats-table td {
+    padding: 5px 6px;
+    border-bottom: 1px solid var(--gray-lt);
+    color: var(--text);
+    text-align: center;
+    white-space: nowrap;
+  }
+  .stats-table td.L { text-align: left; }
+  .stats-table tr:nth-child(even) td { background: var(--off-white); }
+  .stats-table tr.inactive td { color: var(--gray-mid); }
+  .stats-table tr.s-gap td { border: none !important; background: transparent !important; height: 8px; }
+  .stats-table tr.s-tot td {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    background: var(--navy);
+    color: var(--white);
+    border-top: 2px solid var(--navy);
+    border-bottom: none;
+    letter-spacing: 0.03em;
+  }
+  .stats-table tr.s-tot .z { color: rgba(255,255,255,0.3); }
+  .stats-table tr.s-tot .bl { border-left: 1px solid rgba(255,255,255,0.15); }
+  .z { color: var(--gray-mid); }
+  .s-flag { font-size: 9px; color: var(--red); margin-left: 2px; }
+  .s-note {
+    font-size: 10.5px;
+    color: var(--gray-mid);
+    margin-top: 8px;
+    padding: 5px 8px;
+    background: var(--off-white);
+    border-radius: 4px;
+    border-left: 3px solid var(--gray-lt);
+    font-style: italic;
+  }
+
+  /* PBP filter pills */
+  .pp-filter {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .pp-pill {
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1.5px solid var(--navy);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    background: transparent;
+    color: var(--navy);
+    text-transform: uppercase;
+    transition: background 0.15s, color 0.15s;
+  }
+  .pp-pill.active { background: var(--navy); color: var(--white); }
+  .pp-pill.review-pill { border-color: var(--red); color: var(--red); }
+  .pp-pill.review-pill.active { background: var(--red); color: var(--white); }
+
+  /* PBP table */
+  .pp-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .pp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11.5px;
+    border-left: 2px solid var(--navy);
+    border-right: 2px solid var(--navy);
+    table-layout: fixed;
+    min-width: 420px;
+  }
+  .pp-table colgroup col:nth-child(1) { width: 52px; }
+  .pp-table colgroup col:nth-child(2) { width: 80px; }
+  .pp-table colgroup col:nth-child(3) { width: auto; }
+  .pp-table colgroup col:nth-child(4) { width: 110px; }
+  .pp-table th {
+    padding: 5px 7px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    color: var(--navy);
+    background: var(--gray-lt);
+    border-bottom: 1.5px solid var(--navy);
+    text-align: left;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .pp-table th.stat-col { text-align: center; border-left: 1px solid var(--gray-mid); }
+  .pp-table td {
+    padding: 5px 7px;
+    border-bottom: 1px solid var(--gray-lt);
+    vertical-align: top;
+    overflow: hidden;
+  }
+  .pp-table tr:nth-child(even) td { background: var(--off-white); }
+  .pp-table tr.hidden { display: none; }
+  .pp-time { color: var(--gray-mid); font-size: 10.5px; white-space: nowrap; vertical-align: top; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.03em; }
+  .pp-vid { color: var(--navy); font-size: 10.5px; white-space: nowrap; vertical-align: top; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; letter-spacing: 0.03em; border-left: 1px solid var(--gray-lt); }
+  .pp-vid.tbd { color: var(--gray-mid); font-style: italic; font-weight: 400; }
+  .pp-content { display: flex; flex-direction: column; gap: 2px; text-align: left; border-left: 1px solid var(--gray-lt); padding-left: 6px; }
+  .pp-raw { color: var(--gray-mid); font-style: italic; font-size: 10.5px; white-space: normal; word-break: break-word; }
+  .pp-interp { color: var(--text); font-size: 11.5px; white-space: normal; word-break: break-word; }
+  .stat-cell { border-left: 1px solid var(--gray-mid); text-align: center; vertical-align: middle; }
+  .stat-tags { display: flex; flex-direction: column; gap: 3px; align-items: center; }
+  .pp-drill { background: var(--navy) !important; }
+  .pp-drill td {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 8px;
+    border-top: none;
+    border-bottom: none;
+    background: var(--navy) !important;
+  }
+  .pp-table tr.review-row td { background: #fff8e1 !important; }
+  .pp-table tr.review-row:nth-child(even) td { background: #fff3cc !important; }
+  .no-stat { color: var(--gray-mid); font-size: 10px; font-style: italic; }
+
+  /* Stat tags */
+  .tag { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 999px; vertical-align: middle; white-space: nowrap; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; letter-spacing: 0.03em; }
+  .tag-stl { background: #d1fae5; color: #065f46; }
+  .tag-reb { background: #dbeafe; color: #1e40af; }
+  .tag-pts { background: #fef3c7; color: #92400e; }
+  .tag-fga { background: var(--gray-lt); color: var(--gray-mid); }
+  .tag-gbp { background: var(--gray-lt); color: #444; }
+  .tag-to  { background: #fee2e2; color: #991b1b; }
+  .tag-ast { background: #d1fae5; color: #065f46; }
+  .tag-gbo { background: var(--gray-lt); color: #444; }
+  .tag-review { background: #fef3c7; color: var(--red); font-weight: 700; border: 1px solid var(--red); }
+
+  /* ── DESKTOP ── */
+  @media (min-width: 768px) {
+    header { padding: 28px 24px 20px; }
+    header img { width: 72px; }
+    main { max-width: 1100px; padding: 44px 32px 80px; }
+    .principles-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+    .court-wrap { max-width: 320px; }
+    .stats-table { font-size: 12.5px; }
+    .stats-table th { font-size: 10.5px; }
+    .pp-table { font-size: 12px; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="data:image/png;base64,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" alt="Campolindo Cougars">
+  <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAC4AIYDASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAAAAQFBgcIAwIB/8QAUxAAAAUCAgMHDggNBAEFAAAAAAECAwQFBgcRCBIhEzFBUVZ0shQVFxg2N2Fxc5GTlLPRFiIyNFJVgdIzNThCU2J1kqGxwtPiI1RylfFDosHh4//EABwBAAEEAwEAAAAAAAAAAAAAAAABBQYHAgMECP/EAD0RAAECAwMGCwYGAwEAAAAAAAEAAgMEEQUhMQYSE1FSkRQyNEFTYXFyobHBBzM1gdHhFhciQpKyFSPw4v/aAAwDAQACEQMRAD8A2WAAAIQAA5TJMeHFdlSnkMsNJNbjizyJKS3zMCF5qEyLT4T02dIajRmEGt11xRJShJbTMzPgET7K2G3Lig+uI94zDj3ilWcVLlasaykPuUw3tzJDWZKmLz31fqlv5faH+maI8p2nsOT7tQxKU2RutojayUKy2kR57fGHRsjChsBmH5pPMuEzL3uIhNqAr/7K2G3Lig+uI94Oythty4oPriPeKI7UQuWZ+p/5A7UQuWZ+p/5A0Ej0h3fZLpZnYG9Xv2VsNuXFB9cR7wdlbDblxQfXEe8UR2ohcsz9T/yB2ohcsz9T/wAgaCR6Q7vsjSzOwN6vfsrYbcuKD64j3g7K2G3Lig+uI94ojtRC5Zn6n/kDtRC5Zn6n/kDQSPSHd9kaWZ2BvWiLfvmzrgndQ0S5aXUZWqatyjyErVkXDkQkQwzidhNdeC9Qp11UKqOzY7SiUctps0GyvP5KizP4pkNO4DYqU3Em20rNbbFZjJIpkbPbn9NJfRP+A1TMm1jBFhHOas4MwXOzIgoVZIAAHAupAAAAhAAD4pRJSalGRERZmZ8AELy+60wyt55xLbaEmpS1HkSSLhMxjzSJxfqd+15Ng2Jur0BTxNOOMZ68xzPLVLiQXHw7+8W1ZpJYzS7oqirBsV1b8VayZkSI55nJXn8hGW+nw8IsDArCyj4U2u7eF3GyVYU1ruLc2lFSf5if1j4fMHaFDZJw9PGx5h6lcTi+biaGD/3UEpwZw4oGDdoOXNc7rJ1hbWs86ZZ7iRl+Db4z4M+EVffOKlzXBXXZkOdIp0Qj1WGGl5ZJ4M+MxxxaxBnXtWDMjUzTGVGUdjP/ANx+EQYQy0rTiTUQkG5XVkvknCs6CIkw0F55jeB99ZUh+G928oah6UwfDe7eUNQ9KYjwA2aV+sqW8ClujbuCkPw3u3lDUPSmD4b3byhqHpTEeADSv1lHApbo27gpD8N7t5Q1D0pg+G93coah6UxHgA0r9ZRwKW6Nu4LSmD1/U++aC7Zl3paelqaNsjdyylI+8X/2KIxOs658BsRI9y2y88dKdcM4z5FmnI/lMOfZ5+DaQaIcl+HKblRXVNPNKJSFpPIyMhpnD26aHixZ0m0rpZZdm7jqutryzdLgcT+sR5GJPYlsGGdFEvB8fuqqy0yS0VZyVFG84H7Tr7PLsUswgxEo+ItrtVSnuJblISSZcU1fHZXw+MuIxNRheu067tHbE1E6Apx+lvK/0lnnuclrPahX6xDYmHF50W+7Yj12ivpW24RE60Z/HZXltQouAyDvOSoh0iQ72HBQCXjl/wCh9zgpIAABwrqQGe9tln1cy/2bvRMPAZ737j6xzN3omMmcYJHYFZL0GKVTp181idLiNPyIUVtUZa057malKIzLw7C2iQ6R13VWqXnKt5bptU6nLSSGUnsWs0keurjPbkXF9oa9AnuquTmjPSUEWOPfWr3lk+zSFugT3VXJzRnpKCLHHvrV7yyfZpGrKv3nzHkph7MuUP7p/sFCx2hfPGfKJ/mOI7QvnjPlE/wAxDxirjdgVfml93gadzqL7JYetDnvJQ+dvf0hl0vu8DTudRfZLD1oc95KHzt7+kWKPhw7y8xxOXO7PVXIAAA2rqWJpn5ah/ttHQIWdpbNuLrtENCFKyjL3iz/OFNX7XotsaVtQr81C3I8GrJdcSj5RkSE7wu1WlTYivlUmpH40kHO1pCLOQmNYP2hZZO2wyyZwzDhWhN1aYimoqh+p3/0Ln7pg6nf/AELn7pi9+2nsL6oqP7hA7aewvqio/uEI9+GZnr3fdT/8zIXQj+X/AJT1U0mnRIqBKIyMqC7sP/gYhOgR+KLk8u30SHLEzSOs+5MPq3b8GnVBuRPhOMNKWktUlKSZFmOugR+KLk8u30SD2Jt81Iue/q9FBY8mJOe0Oqo3XLUAAADMu1AZ737j6xzN3omHgM979x9Y5m70TGTOMEjsCssaBPdVcnNGekoIsce+tXvLJ9mkLdAnuquTmjPSUEWOPfWr3lk+zSNWVfvPmPJTD2Zcof3T/YKFjtC+eM+UT/McR2hfPGfKJ/mIeMVcbsCr80vu8DTudRfZLD1oc95KHzt7+kMul93gadzqL7JYetDnvJQ+dvf0ixR8OHeXmOJy53Z6q5AAAG1dSrq5MEsNrhrkutVagHInS167znVLidZWRFnkSsi3g3drzhLyYP1t37wtYA3iajAUDzvWowYZvLQqp7XnCXkwfrbv3gdrzhLyYP1t37wtYAXhcfbO8o0ELZG5VT2vOEvJg/W3fvCXWDYFq2KzJatim9RIkqJTpbqtesZb3yjMSgAxfMRXijnEjtSthMaagBAAAGlbEBnvfuPrHM3eiYeAz3v3H1jmbvRMZM4wSOwKyxoE91Vyc0Z6Sgixx761e8sn2aQt0Ce6q5OaM9JQRY499aveWT7NI1ZV+8+Y8lMPZlyh/dP9goWO0L54z5RP8xxHaF88Z8on+Yh4xVxuwKvzS+7wNO51F9ksPWhz3kofO3v6Qy6X3eBp3Oovslh60Oe8lD529/SLFHw4d5eY4nLndnqrkAAAbV1IAEEit0aO8pmRV6ey6g8lIXJQlST8JGY5/CGgfXlM9bR7xlmu1JKhOYA2fCGgfXlM9bR7wfCGgfXlM9bR7wZjtSM4JzAGz4Q0D68pnraPeFUGoQJxKODNjSiTsUbLqV5ePIwhaRzIqEpAAARKgM979x9Y5m70TDwGe9+4+sczd6JjJnGCR2BWWNAnuquTmjPSUEWOPfWr3lk+zSFugT3VXJzRnpKCLHHvrV7yyfZpGrKv3nzHkph7MuUP7p/sFCx2hfPGfKJ/mOI7QvnjPlE/wAxDxirjdgVfml93gadzqL7JYetDnvJQ+dvf0hl0vu8DTudRfZLD1oc95KHzt7+kWKPhw7y8xxOXO7PVXIAAA2rqWB8V6RUbn0lazbsCaUd6dUiZbW4tRISZoTv5Znl9gmXap3/AMq6H6V/7gbJn5ah/ttHQIXXpI3jcVs1elM0SpOREPMKU4SPzjJWQeLRtJ8jCYW4UC12JYxteaMBpo4k44XXqp+1Tv8A5V0P0r/3Adqnf/Kuh+lf+4PPZYv7lBI/gDssX9ygkfwDL+K3/wDAKY/lnM7bd5+rary0cb2te1qlcMy5qS9Hp8dchxtp17XUlJZmRZoIsxYGga645Sbj3Rxa8n0Zax5/mkJ7dNRmVbRZq1RqDyn5L9DdU44e+o9QxX+gR+KLk8u30SD2Jt81Iue/q9FBY8mJOe0Oqo3XLUAAADMu1AZ737j6xzN3omHgM979x9Y5m70TGTOMEjsCssaBPdVcnNGekoIsce+tXvLJ9mkKtAx1pN33C0pxCXFw2jQkz2qyUrPIuHId9IWjVGm4k1CbLjqRGnqS7Hd30rIkpSe3jIy3vENeVQJiV7PJS72aPa2ZcCby003hV0OsQyTKaUZ5ES0mZ/aOQBDlcxFRRaa0hbcqN6YDR2LeSiY6wTEskIVmbiEoMjJPGe3e8BinNHzHil4fWq9a1zUqWaWHlLZcjpI15n8pKiMy4hIMDsUHrWmIotYdU5RnlZJUe044j4f+PGLHr9iYF1+qv1ec5RVSZJ67ikTkIJR8eWYnFnWpLxZfRRhd41VAW/k3OyE4SwVBwNLiPrrTH21mH31bW/Qo+8OcnSusRMdxUelVlx4kmaEqbSkjVwEZ62wg49izAD6dI/7FPvB2LMAPp0j/ALFPvHXprN1HeEzcCtLZ8D9FSeCVOuTEzH0r6TASxEZm9WS3cjJtBEWRII+FWwhZeltIYcuSkMtuoU41GVrpI9qc1bMxL7lvSysMbMRR7ITBefcIyYajOEtKD4VrURn5uEZtrFSm1eovVCoSFyJLyjUtaj2mYY7etNkx/rYLh5KwchMnZiBF4bFuArjzk3bgkgAD2w06+8hhltTjriiShCSzNRnsIiIRhWuTRaSqP5I8/wDYLvQMQrQI/FFyeXb6JCf3jBfoOizU6fVNSPIbojjakqUWxZoMiT4xANAj8UXJ5dvokLCkwRZrger0Xmu1XtfarnNNQS7zK1AAABwJUDnKYalRnIz6CcadSaFpPeMj3yHQAELE+MuGlewbu5m8bNdfKkE7rtOJMzOOef4NfGXhF5Yd3la+Olhu0qqIaZq7KC6oY3ltr4HUeD/wLcq9OhVamSKbUY7cmJIQbbrSyzSpJjFuLmHdx4KXqxeFoPSOtG7azLxHmbJntNpzLfSfB4PCWYdmuh2hD0UXj8x19RXG18WQiiNBNADW7m6wvWIlm1SzK4uBObNTKjM474F8V1PH4/AIyNO2NdNqY8WGuBUW22Ko0n/WZIy3Rlf6Rsz4P/Biir1sWv2vXHabJhvyEltaeaaM0uJ4D2b3iEItCznykQilyvHJnKiFasEMiECIPHrHqFFx9zPjMLOtNV+rJvoFe4HWmq/Vk30CvcG7NOpSvSs1hI8z4zBmfGYWdaar9WTfQK9wOtNV+rJvoFe4GadSXSs2gkjaFuOJbbSalqPJJEW0zGjsGMPINoUhd6XabbMhto3UE6eSYyMszUf6xkEWBuGcelQyvO7UIa3NBux2XthNJ+mvPh4iFU49YoVnFa6WbFsxt5ylbsSCQ2R60twj+Ur9Qt8vOfBlJLFsh0Z2kfcB4Krcs8rgAZOVN2BI5+odWvckuLl+3Hjbe7FpWmw8qlJe1WGk7N1Mv8A1F8RcO3eGocE8NqbhraqaZFVu818ycmyP0jmXBxEXAG3AHCinYbW+SlpTIrcpBHLkmW9+oniSQs4P03NNcNDCuYPFVtLwCDpInGPggAABvXWgAAAQgI61S4FapcimVOK3JiSEGhxtZZkZGFgAoJBqEEVWIMVLEufAy92LqtSQ+qlKc1mXySZk3mf4J0uI94j4fGLMp2ljaTlPjnVbZq5TdQt2JlLS2yVw6pqWRmXjIhoWu0mnVylP0urRGpcOQg0OtOJzJRGIB2B8LeS8fzhz4ZAjMAmGkkc4XDweLCcdCaAqAdtbYPJmu+hY/uA7a2weTNd9Cx/cE/7A+FvJeP5wdgfC3kvH84TPkNkrKk3tBQDtrbB5M130LH9wHbW2DyZrvoWP7gn/YHwt5Lx/ODsD4W8l4/nBnyGyUUm9oKAdtbYPJmu+hY/uA7a2weTNd9Cx/cE/wCwPhbyXj+cHYHwt5Lx/ODPkNkopN7QWeMascqlicUO07Lp8+HDkqJLrayInpCzPYnJJmRJ+0Xpo44PQ8PKKmp1NDb9xS2y3Ze+UdJ/mJ8PGf2eOVWnhVYdrVZNVotvxo0xKTSl3LM0kfEJsMJicYYYhQRRvPrKWFLuD9JENSgAABvXWgAAAQgB7wAHvGBCzxcGK+KFQrd1v2ZQ6UqiW3KXGfVJzN1xSDyUZEW/nv5cRjriFi9e8XC+1Lzt6mQ4x1NxUaXGkpNTm7byCQnfyPUWfmEShYjN4TV7EakValzE1ip1h+ZTCXHJbDqVq+IZ/GIzI/AGqu3tVL/vTD23K3rW9V4rjj0omoRG0h1eRsmTZr2/FIt89msYfWy7ag5gzRz6xT6psMY0IzjU/VW5YWI93XZgbUrmhR6edxwnHEm0sjS1kgyM8y48sxA7W0l6q9ZtXcrVPjlX0kk6W200eo/ns3s9uRkeYiOF2JFFsI7+tiqyJstmYp3qZ1uOks1klRGZp1vikeZ7xmHrB5NgS8IGbuq8Sauo2k3IacNCE6qjcNSkbM/jZaxcQV0tDh5xcyoqKfP05kgjPdSjr6GqeDxjxYThJ8P1QKF1GcvcS+Ketq7S+Tnv5kHGNjJiNbFaoJ33R6Q7S62jOOcFZ7oWZFkZ574b5bBVLt80Reiui2kpXXFNRPM9zLU2qNW/nnvHxC0MJ8K7Yr9jNXnGqVcrclMB1EKNUHSNDLnqmaGQ5nsI9uQSmkYV1KQiMV7GHbpFqPMeqUJ1aHFPMmhbbZd0GtXEWTZ/GIsy3y3hOeEVXiqhcN3UeTTeJcuVU4lLqCWmnFTCyJCnMiMiUZkWT+X4gFq4zupB0UPEiGxbMVE+FMdVFdOcvfNGRk0eLVPM9opfhHi/Z+OtBnp1qiW/EoUkyfnPw2yUuWrNaVJUa1GSkp21VZmWwth5iaXiPGpON9KKkUt2LDpHqDUMzacQ2aFaRqUwlCtmqe3ypzJJGJVid0ZK3yqsSSUU2msxMIWqkjJxkQzfr0YSa+JQAAAAAAB/9k=" alt="Campolindo Cougars">
   <h1>Campolindo Cougars</h1>
   <h2>Freshman Basketball &nbsp;&middot;&nbsp; Players' Playbook &nbsp;&middot;&nbsp; Summer 2025</h2>
 </header>
@@ -409,6 +615,7 @@
     <a href="#philosophy" data-section="philosophy">Philosophy</a>
     <a href="#offense" data-section="offense">Offense</a>
     <a href="#defense" data-section="defense">Defense</a>
+    <a href="#stats" data-section="stats">Stats</a>
   </div>
 </nav>
 
@@ -418,13 +625,11 @@
   <div class="section-block" id="philosophy">
     <div class="section-eyebrow">Section 1</div>
     <div class="section-title">Coaching Philosophy</div>
-
     <div class="quote-hero">
       <div class="quote-accent top"></div>
       <p>"If you try to stand out in everything, you will stand out in nothing."</p>
       <div class="quote-accent bottom"></div>
     </div>
-
     <div class="principles-grid">
       <div class="principle">
         <div class="principle-header">
@@ -444,7 +649,6 @@
           </div>
         </div>
       </div>
-
       <div class="principle">
         <div class="principle-header">
           <span class="p-num">&#9313;</span>
@@ -463,7 +667,6 @@
           </div>
         </div>
       </div>
-
       <div class="principle">
         <div class="principle-header">
           <span class="p-num">&#9314;</span>
@@ -485,62 +688,55 @@
   </div>
 
   <!-- SECTION 2 -->
-  
   <div class="section-block" id="offense">
     <div class="section-eyebrow">Section 2</div>
     <div class="section-title">Offensive Schemes</div>
-
-    <!--  -->  
-
     <div class="scheme-group">
       <button class="scheme-toggle" onclick="toggleScheme(this)">
         OOB - Baseline ("3") <span class="chevron">&#9660;</span>
       </button>
       <div class="scheme-content">
         <div class="play-diagram">
-          <img src="https://d25g0k1jyinm1g.cloudfront.net/play_lambda/lJfigVQNE7/1781223491000.png" alt="3 out of bounds play (baseline OOB) play diagram" />
+          <img src="https://d25g0k1jyinm1g.cloudfront.net/play_lambda/lJfigVQNE7/1781223491000.png" alt="3 out of bounds play diagram" />
           <a class="play-link" href="https://thehoopsgeek.com/play/lJfigVQNE7" target="_blank" rel="noopener">&#9654; View Full Animation</a>
         </div>
       </div>
     </div>
-
     <div class="scheme-group">
       <button class="scheme-toggle" onclick="toggleScheme(this)">
         OOB - Sideline ("Pairs") <span class="chevron">&#9660;</span>
       </button>
       <div class="scheme-content">
         <div class="play-diagram">
-          <img src="https://d25g0k1jyinm1g.cloudfront.net/play_lambda/KDjfWokPqt/1781216518000.png" alt="Pairs out of bounds play (sideline OOB) play diagram" />
+          <img src="https://d25g0k1jyinm1g.cloudfront.net/play_lambda/KDjfWokPqt/1781216518000.png" alt="Pairs out of bounds play diagram" />
           <a class="play-link" href="https://thehoopsgeek.com/play/KDjfWokPqt" target="_blank" rel="noopener">&#9654; View Full Animation</a>
         </div>
       </div>
     </div>
-
-
     <div class="scheme-group">
       <button class="scheme-toggle" onclick="toggleScheme(this)">
         Offense 1 <span class="chevron">&#9660;</span>
       </button>
       <div class="scheme-content">
         <div class="court-wrap"><svg viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg">
-  <rect width="280" height="300" fill="#d4a84b" rx="4"/>
-  <rect x="10" y="10" width="260" height="280" fill="none" stroke="#0D1F4E" stroke-width="2.5"/>
-  <rect x="95" y="10" width="90" height="115" fill="rgba(13,31,78,0.12)" stroke="#0D1F4E" stroke-width="2"/>
-  <path d="M 95 125 A 45 45 0 0 0 185 125" fill="none" stroke="#0D1F4E" stroke-width="2" stroke-dasharray="5,4"/>
-  <path d="M 95 125 A 45 45 0 0 1 185 125" fill="none" stroke="#0D1F4E" stroke-width="2"/>
-  <circle cx="140" cy="28" r="5" fill="none" stroke="#C8102E" stroke-width="2"/>
-  <line x1="120" y1="18" x2="160" y2="18" stroke="#C8102E" stroke-width="2.5"/>
-  <path d="M 116 28 A 24 24 0 0 0 164 28" fill="none" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="27" y1="10" x2="27" y2="78" stroke="#0D1F4E" stroke-width="2"/>
-  <line x1="253" y1="10" x2="253" y2="78" stroke="#0D1F4E" stroke-width="2"/>
-  <path d="M 27 78 A 113 113 0 0 0 253 78" fill="none" stroke="#0D1F4E" stroke-width="2"/>
-  <line x1="95" y1="55"  x2="85" y2="55"  stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="185" y1="55" x2="195" y2="55" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="95" y1="80"  x2="85" y2="80"  stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="185" y1="80" x2="195" y2="80" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="95" y1="100" x2="85" y2="100" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="185" y1="100" x2="195" y2="100" stroke="#0D1F4E" stroke-width="1.5"/>
-</svg></div>
+          <rect width="280" height="300" fill="#d4a84b" rx="4"/>
+          <rect x="10" y="10" width="260" height="280" fill="none" stroke="#0D1F4E" stroke-width="2.5"/>
+          <rect x="95" y="10" width="90" height="115" fill="rgba(13,31,78,0.12)" stroke="#0D1F4E" stroke-width="2"/>
+          <path d="M 95 125 A 45 45 0 0 0 185 125" fill="none" stroke="#0D1F4E" stroke-width="2" stroke-dasharray="5,4"/>
+          <path d="M 95 125 A 45 45 0 0 1 185 125" fill="none" stroke="#0D1F4E" stroke-width="2"/>
+          <circle cx="140" cy="28" r="5" fill="none" stroke="#C8102E" stroke-width="2"/>
+          <line x1="120" y1="18" x2="160" y2="18" stroke="#C8102E" stroke-width="2.5"/>
+          <path d="M 116 28 A 24 24 0 0 0 164 28" fill="none" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="27" y1="10" x2="27" y2="78" stroke="#0D1F4E" stroke-width="2"/>
+          <line x1="253" y1="10" x2="253" y2="78" stroke="#0D1F4E" stroke-width="2"/>
+          <path d="M 27 78 A 113 113 0 0 0 253 78" fill="none" stroke="#0D1F4E" stroke-width="2"/>
+          <line x1="95" y1="55" x2="85" y2="55" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="185" y1="55" x2="195" y2="55" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="95" y1="80" x2="85" y2="80" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="185" y1="80" x2="195" y2="80" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="95" y1="100" x2="85" y2="100" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="185" y1="100" x2="195" y2="100" stroke="#0D1F4E" stroke-width="1.5"/>
+        </svg></div>
         <p class="coming-soon">&#8987; Plays will be updated soon</p>
       </div>
     </div>
@@ -550,35 +746,214 @@
   <div class="section-block" id="defense">
     <div class="section-eyebrow">Section 3</div>
     <div class="section-title">Defensive Schemes</div>
-
     <div class="scheme-group">
       <button class="scheme-toggle" onclick="toggleScheme(this)">
         MTM &mdash; Man to Man <span class="chevron">&#9660;</span>
       </button>
       <div class="scheme-content">
         <div class="court-wrap"><svg viewBox="0 0 280 300" xmlns="http://www.w3.org/2000/svg">
-  <rect width="280" height="300" fill="#d4a84b" rx="4"/>
-  <rect x="10" y="10" width="260" height="280" fill="none" stroke="#0D1F4E" stroke-width="2.5"/>
-  <rect x="95" y="10" width="90" height="115" fill="rgba(13,31,78,0.12)" stroke="#0D1F4E" stroke-width="2"/>
-  <path d="M 95 125 A 45 45 0 0 0 185 125" fill="none" stroke="#0D1F4E" stroke-width="2" stroke-dasharray="5,4"/>
-  <path d="M 95 125 A 45 45 0 0 1 185 125" fill="none" stroke="#0D1F4E" stroke-width="2"/>
-  <circle cx="140" cy="28" r="5" fill="none" stroke="#C8102E" stroke-width="2"/>
-  <line x1="120" y1="18" x2="160" y2="18" stroke="#C8102E" stroke-width="2.5"/>
-  <path d="M 116 28 A 24 24 0 0 0 164 28" fill="none" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="27" y1="10" x2="27" y2="78" stroke="#0D1F4E" stroke-width="2"/>
-  <line x1="253" y1="10" x2="253" y2="78" stroke="#0D1F4E" stroke-width="2"/>
-  <path d="M 27 78 A 113 113 0 0 0 253 78" fill="none" stroke="#0D1F4E" stroke-width="2"/>
-  <line x1="95" y1="55"  x2="85" y2="55"  stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="185" y1="55" x2="195" y2="55" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="95" y1="80"  x2="85" y2="80"  stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="185" y1="80" x2="195" y2="80" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="95" y1="100" x2="85" y2="100" stroke="#0D1F4E" stroke-width="1.5"/>
-  <line x1="185" y1="100" x2="195" y2="100" stroke="#0D1F4E" stroke-width="1.5"/>
-</svg></div>
+          <rect width="280" height="300" fill="#d4a84b" rx="4"/>
+          <rect x="10" y="10" width="260" height="280" fill="none" stroke="#0D1F4E" stroke-width="2.5"/>
+          <rect x="95" y="10" width="90" height="115" fill="rgba(13,31,78,0.12)" stroke="#0D1F4E" stroke-width="2"/>
+          <path d="M 95 125 A 45 45 0 0 0 185 125" fill="none" stroke="#0D1F4E" stroke-width="2" stroke-dasharray="5,4"/>
+          <path d="M 95 125 A 45 45 0 0 1 185 125" fill="none" stroke="#0D1F4E" stroke-width="2"/>
+          <circle cx="140" cy="28" r="5" fill="none" stroke="#C8102E" stroke-width="2"/>
+          <line x1="120" y1="18" x2="160" y2="18" stroke="#C8102E" stroke-width="2.5"/>
+          <path d="M 116 28 A 24 24 0 0 0 164 28" fill="none" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="27" y1="10" x2="27" y2="78" stroke="#0D1F4E" stroke-width="2"/>
+          <line x1="253" y1="10" x2="253" y2="78" stroke="#0D1F4E" stroke-width="2"/>
+          <path d="M 27 78 A 113 113 0 0 0 253 78" fill="none" stroke="#0D1F4E" stroke-width="2"/>
+          <line x1="95" y1="55" x2="85" y2="55" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="185" y1="55" x2="195" y2="55" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="95" y1="80" x2="85" y2="80" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="185" y1="80" x2="195" y2="80" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="95" y1="100" x2="85" y2="100" stroke="#0D1F4E" stroke-width="1.5"/>
+          <line x1="185" y1="100" x2="195" y2="100" stroke="#0D1F4E" stroke-width="1.5"/>
+        </svg></div>
         <p class="coming-soon">&#8987; Plays will be updated soon</p>
       </div>
     </div>
   </div>
+
+  <!-- SECTION 4: STATS -->
+  <div class="section-block" id="stats">
+    <div class="section-eyebrow">Section 4</div>
+    <div class="section-title">Practice Stats</div>
+
+    <div class="stats-meta">6.20.26 &nbsp;&middot;&nbsp; Coach Imani Dunbar &nbsp;&middot;&nbsp; 10:22–11:40 &nbsp;&middot;&nbsp; Drills: 5v5 · FT · OOB · 1v1/2v2 · 5v5 Live</div>
+
+    <!-- VIDEO PLAYER -->
+    <div class="video-block">
+      <div class="video-eyebrow">Practice Film</div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/ea0QmWXr64Y" title="6.20.26 Practice Film" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+      </div>
+      <div class="video-hint">Tap video for fullscreen &nbsp;&middot;&nbsp; Use timestamps in Play-by-Play to navigate</div>
+    </div>
+
+    <!-- Stats sub-tabs -->
+    <div class="stats-tabs">
+      <button class="stats-tab active" onclick="showStats('trad',this)">Traditional</button>
+      <button class="stats-tab" onclick="showStats('effort',this)">Effort</button>
+      <button class="stats-tab" onclick="showStats('pbp',this)">Play-by-Play</button>
+    </div>
+
+    <!-- TRADITIONAL -->
+    <div id="trad" class="stats-panel active">
+      <div class="stats-wrap"><table class="stats-table">
+        <thead>
+          <tr>
+            <th class="L grp" rowspan="2" style="width:22px">#</th>
+            <th class="L grp" rowspan="2" style="min-width:88px">Name</th>
+            <th class="grp bl" colspan="2">Scoring</th>
+            <th class="grp bl" colspan="2">FT</th>
+            <th class="grp bl">AST</th>
+            <th class="grp bl">TO</th>
+            <th class="grp bl">STL</th>
+            <th class="grp bl" colspan="3">Rebounding</th>
+          </tr>
+          <tr>
+            <th class="bl">PTS</th><th>FG</th>
+            <th class="bl">FTM</th><th>FTA</th>
+            <th class="bl">AST</th>
+            <th class="bl">TO</th>
+            <th class="bl">STL</th>
+            <th class="bl">OR</th><th>DR</th><th>R</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="L">15</td><td class="L">Andrew</td><td class="bl z">0</td><td class="z">0/0</td><td class="bl z">0</td><td class="z">0</td><td class="bl">1</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl z">—</td><td class="z">—</td><td class="z">0</td></tr>
+          <tr><td class="L z">31</td><td class="L">Brenan Kim</td><td class="bl z">0</td><td class="z">0/0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl z">—</td><td class="z">—</td><td>3</td></tr>
+          <tr><td class="L z">—</td><td class="L">Kyle <span class="s-flag">⚠ # ?</span></td><td class="bl z">0</td><td class="z">0/0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl z">—</td><td class="z">—</td><td>1</td></tr>
+          <tr><td class="L z">20</td><td class="L">Oliver</td><td class="bl z">0</td><td class="z">0/0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl z">—</td><td class="z">—</td><td>1</td></tr>
+          <tr><td class="L z">—</td><td class="L">Sorin</td><td class="bl z">0</td><td class="z">0/1</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl">1</td><td class="bl z">—</td><td class="z">—</td><td>1</td></tr>
+          <tr><td class="L z">—</td><td class="L">Tacuma</td><td class="bl z">0</td><td class="z">0/1</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl">2</td><td class="bl z">—</td><td class="z">—</td><td class="z">0</td></tr>
+          <tr><td class="L z">—</td><td class="L">Thorne</td><td class="bl">2</td><td>1/1</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl z">—</td><td class="z">—</td><td class="z">0</td></tr>
+          <tr><td class="L">10</td><td class="L">Tommy</td><td class="bl">4</td><td>2/4</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="bl z">0</td><td class="bl">1</td><td class="bl z">—</td><td class="z">—</td><td>1</td></tr>
+          <tr style="color:var(--gray-mid)"><td class="L z">—</td><td class="L">Team</td><td class="bl z">0</td><td class="z">0/0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="bl" style="color:var(--gray-mid)">1</td><td class="bl z">0</td><td class="bl z">—</td><td class="z">—</td><td class="z">0</td></tr>
+          <tr class="s-tot"><td class="L"></td><td class="L">Totals</td><td class="bl">6</td><td>3/7</td><td class="bl z">0</td><td class="z">0</td><td class="bl">1</td><td class="bl">1</td><td class="bl">4</td><td class="bl z">—</td><td class="z">—</td><td>7</td></tr>
+          <tr class="s-gap"><td colspan="12"></td></tr>
+          <tr class="inactive"><td class="L">—</td><td class="L">Darren</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td class="bl">—</td><td class="bl">—</td><td class="bl">—</td><td>—</td><td>—</td></tr>
+          <tr class="inactive"><td class="L">—</td><td class="L">Henry</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td class="bl">—</td><td class="bl">—</td><td class="bl">—</td><td>—</td><td>—</td></tr>
+          <tr class="inactive"><td class="L">3</td><td class="L">Jackson</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td class="bl">—</td><td class="bl">—</td><td class="bl">—</td><td>—</td><td>—</td></tr>
+          <tr class="inactive"><td class="L">4</td><td class="L">Nikita</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td class="bl">—</td><td class="bl">—</td><td class="bl">—</td><td>—</td><td>—</td></tr>
+          <tr class="inactive"><td class="L">1</td><td class="L">Ren</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td class="bl">—</td><td class="bl">—</td><td class="bl">—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table></div>
+      <p class="s-note">† OR/DR split not logged — no clear possession context. FT drill not logged (group format). Flagged stats (Andrew AST, Tommy "and one") held pending review. Blocks in play-by-play only.</p>
+    </div>
+
+    <!-- EFFORT -->
+    <div id="effort" class="stats-panel">
+      <div class="stats-wrap"><table class="stats-table">
+        <thead>
+          <tr>
+            <th class="L grp" rowspan="2" style="width:22px">#</th>
+            <th class="L grp" rowspan="2" style="min-width:88px">Name</th>
+            <th class="grp bl" colspan="2">Ball Pressure</th>
+            <th class="grp bl" colspan="2">Box Out</th>
+            <th class="grp bl" colspan="2">Wall Up</th>
+            <th class="grp bl" colspan="2">Help</th>
+          </tr>
+          <tr>
+            <th class="bl">GBP</th><th>BBP</th>
+            <th class="bl">GBO</th><th>BBO</th>
+            <th class="bl">GWU</th><th>BWU</th>
+            <th class="bl">GHLP</th><th>BHLP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="L">15</td><td class="L">Andrew</td><td class="bl">1</td><td class="z">0</td><td class="bl">1</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td></tr>
+          <tr><td class="L z">31</td><td class="L">Brenan Kim</td><td class="bl">1</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td></tr>
+          <tr><td class="L z">—</td><td class="L">Henry <span class="s-flag">⚠ # ?</span></td><td class="bl">1</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td></tr>
+          <tr><td class="L z">—</td><td class="L">Kyle <span class="s-flag">⚠ # ?</span></td><td class="bl">1</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td></tr>
+          <tr><td class="L z">—</td><td class="L">Tacuma</td><td class="bl">1</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td></tr>
+          <tr><td class="L">10</td><td class="L">Tommy</td><td class="bl">1</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td></tr>
+          <tr><td class="L z">—</td><td class="L">Thorne</td><td class="bl">1</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td></tr>
+          <tr style="color:var(--gray-mid)"><td class="L z">—</td><td class="L">Team</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td></tr>
+          <tr class="s-tot"><td class="L"></td><td class="L">Totals</td><td class="bl">7</td><td class="z">0</td><td class="bl">1</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td><td class="bl z">0</td><td class="z">0</td></tr>
+          <tr class="s-gap"><td colspan="10"></td></tr>
+          <tr class="inactive"><td class="L">—</td><td class="L">Nikita</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td></tr>
+          <tr class="inactive"><td class="L">20</td><td class="L">Oliver</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td></tr>
+          <tr class="inactive"><td class="L">—</td><td class="L">Sorin</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td><td class="bl">—</td><td>—</td></tr>
+        </tbody>
+      </table></div>
+      <p class="s-note">† GBP credited only when coach explicitly named the player. Henry active in later drills — jersey # unknown.</p>
+    </div>
+
+    <!-- PLAY BY PLAY -->
+    <div id="pbp" class="stats-panel">
+      <div class="pp-filter">
+        <button class="pp-pill active" onclick="filterPP('all',this)">All</button>
+        <button class="pp-pill" onclick="filterPP('STL',this)">STL</button>
+        <button class="pp-pill" onclick="filterPP('REB',this)">REB</button>
+        <button class="pp-pill" onclick="filterPP('PTS',this)">PTS</button>
+        <button class="pp-pill" onclick="filterPP('FGA',this)">FGA</button>
+        <button class="pp-pill" onclick="filterPP('AST',this)">AST</button>
+        <button class="pp-pill" onclick="filterPP('GBP',this)">GBP</button>
+        <button class="pp-pill" onclick="filterPP('GBO',this)">GBO</button>
+        <button class="pp-pill" onclick="filterPP('TO',this)">TO</button>
+        <button class="pp-pill" onclick="filterPP('none',this)">No Stat</button>
+        <button class="pp-pill review-pill" onclick="filterPP('review',this)">Review</button>
+      </div>
+      <div class="pp-wrap">
+      <table class="pp-table" id="pp-tbl">
+        <colgroup><col style="width:52px"><col style="width:72px"><col style="width:auto"><col style="width:110px"></colgroup>
+        <thead><tr>
+          <th>Transcript Time</th>
+          <th>Video Time</th>
+          <th>Transcript · Interpretation</th>
+          <th class="stat-col">Stat</th>
+        </tr></thead>
+        <tbody>
+
+        <tr class="pp-drill"><td colspan="4">5v5 — Ball Pressure / Deny Defense (10:22–10:35)</td></tr>
+        <tr data-stats="GBP"><td class="pp-time">10:23:43</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good bull pressure, Tommy!"</span><span class="pp-interp">Tommy named for ball pressure</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-gbp">GBP Tommy</span></div></td></tr>
+        <tr data-stats="none"><td class="pp-time">10:24:09</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good steal"</span><span class="pp-interp">Steal called, no player named</span></div></td><td class="stat-cell"><span class="no-stat">no stat</span></td></tr>
+        <tr data-stats="STL REB"><td class="pp-time">10:24:12</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good job, Takuma. Steel Takuma. Good board, Brennan. Rebound Brennan."</span><span class="pp-interp">Tacuma steal confirmed; Brenan rebound confirmed</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-stl">STL Tacuma</span><span class="tag tag-reb">REB Brenan</span></div></td></tr>
+        <tr data-stats="GBP TO"><td class="pp-time">10:24:31</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"First turnover, good ball pressure, Thorin"</span><span class="pp-interp">Thorne (alias "Thorin") GBP; turnover to team</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-gbp">GBP Thorne</span><span class="tag tag-to">TO Team</span></div></td></tr>
+        <tr class="review-row" data-stats="REB review"><td class="pp-time">10:24:45</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"You have a rebound, Brennan."</span><span class="pp-interp">Brenan second REB — separate timestamp from 10:24:12. Confirm?</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-review">Review</span><span class="tag tag-reb">REB Brenan?</span></div></td></tr>
+        <tr class="review-row" data-stats="none review"><td class="pp-time">10:25:22</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good score, Takuma. Or sorry."</span><span class="pp-interp">Coach immediately retracts — zeroed out. Confirm?</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-review">Review</span><span class="no-stat">retracted</span></div></td></tr>
+        <tr data-stats="PTS FGA"><td class="pp-time">10:25:47</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Shot, Tommy. Two points"</span><span class="pp-interp">Score confirmed with "two points"</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-pts">2 PTS Tommy</span><span class="tag tag-fga">FGM Tommy</span></div></td></tr>
+        <tr data-stats="FGA"><td class="pp-time">10:26:02</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good shot, Tommy missed."</span><span class="pp-interp">Shot attempt confirmed missed</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-fga">FGA Tommy</span></div></td></tr>
+        <tr class="review-row" data-stats="FGA review"><td class="pp-time">10:26:24</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good shot, Tommy."</span><span class="pp-interp">No score confirm — logged as miss. Should "good shot" count as a make?</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-review">Review</span><span class="tag tag-fga">FGA Tommy?</span></div></td></tr>
+        <tr data-stats="STL"><td class="pp-time">10:26:39</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good steal, good steal, Takuma!"</span><span class="pp-interp">Second Tacuma steal, different play from 10:24:12</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-stl">STL Tacuma</span></div></td></tr>
+        <tr data-stats="REB"><td class="pp-time">10:26:47</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good rebound, Tommy!"</span><span class="pp-interp">Tommy rebound confirmed</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-reb">REB Tommy</span></div></td></tr>
+        <tr data-stats="REB"><td class="pp-time">10:27:30</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good take Soren, good rebound, Soren"</span><span class="pp-interp">Sorin rebound confirmed</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-reb">REB Sorin</span></div></td></tr>
+        <tr data-stats="FGA"><td class="pp-time">10:27:34</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good shot, Takuma."</span><span class="pp-interp">Shot noted, no score confirmation — miss</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-fga">FGA Tacuma</span></div></td></tr>
+        <tr data-stats="PTS FGA"><td class="pp-time">10:28:10</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Tommy for two."</span><span class="pp-interp">Score confirmed with "for two"</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-pts">2 PTS Tommy</span><span class="tag tag-fga">FGM Tommy</span></div></td></tr>
+        <tr data-stats="STL"><td class="pp-time">10:31:08</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Yes, Tommy. Yes, Tommy, good steal."</span><span class="pp-interp">Tommy steal confirmed</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-stl">STL Tommy</span></div></td></tr>
+        <tr data-stats="GBP"><td class="pp-time">10:31:20</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Takuma, great job. That was your defensive stop. Great ball pressure."</span><span class="pp-interp">Tacuma named explicitly for ball pressure</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-gbp">GBP Tacuma</span></div></td></tr>
+        <tr data-stats="REB"><td class="pp-time">10:31:40</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good rebound, Brennan. Good pass."</span><span class="pp-interp">Brenan rebound confirmed; pass noted but no resolved shot → no AST</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-reb">REB Brenan</span><span class="no-stat">no AST</span></div></td></tr>
+        <tr data-stats="REB"><td class="pp-time">10:31:44</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Your rebound, Kyle"</span><span class="pp-interp">Kyle rebound confirmed</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-reb">REB Kyle</span></div></td></tr>
+        <tr data-stats="GBP"><td class="pp-time">10:31:50</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"There, Brennan, good ball pressure"</span><span class="pp-interp">Brenan named for ball pressure</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-gbp">GBP Brenan</span></div></td></tr>
+        <tr data-stats="STL"><td class="pp-time">10:32:14</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good steal, Soren, you all right"</span><span class="pp-interp">Sorin steal confirmed</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-stl">STL Sorin</span></div></td></tr>
+        <tr data-stats="none"><td class="pp-time">10:32:22</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good steel, good steal! Blue ball!"</span><span class="pp-interp">Steal called, no player named</span></div></td><td class="stat-cell"><span class="no-stat">no stat</span></td></tr>
+        <tr data-stats="none"><td class="pp-time">10:35:02</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"That's your steel. That's good ball pressure. Good job."</span><span class="pp-interp">Steal + GBP called, no player named</span></div></td><td class="stat-cell"><span class="no-stat">no stat</span></td></tr>
+        <tr data-stats="PTS FGA"><td class="pp-time">10:35:22</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Yeah, Thor, two points."</span><span class="pp-interp">Thorne (alias "Thor") — score confirmed with "two points"</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-pts">2 PTS Thorne</span><span class="tag tag-fga">FGM Thorne</span></div></td></tr>
+
+        <tr class="pp-drill"><td colspan="4">Free Throw Drill (10:36–10:39) — Group Format</td></tr>
+        <tr data-stats="none"><td class="pp-time">10:36–39</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Free throws for water… if they miss, one clap, if they make it, two claps."</span><span class="pp-interp">Group FT drill — no individual names per attempt, no stats logged</span></div></td><td class="stat-cell"><span class="no-stat">group drill</span></td></tr>
+
+        <tr class="pp-drill"><td colspan="4">OOB Play Review + 1v1 / 2v2 Live (10:40–11:10)</td></tr>
+        <tr data-stats="GBP"><td class="pp-time">11:06:55</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Great ball pressure, Kyle."</span><span class="pp-interp">Kyle named explicitly for ball pressure</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-gbp">GBP Kyle</span></div></td></tr>
+        <tr data-stats="none"><td class="pp-time">11:08:10</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Awesome. Great ball pressure."</span><span class="pp-interp">GBP called, no player named</span></div></td><td class="stat-cell"><span class="no-stat">no stat</span></td></tr>
+        <tr class="review-row" data-stats="review"><td class="pp-time">11:08:25</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good, Tommy! And one."</span><span class="pp-interp">"And one" implies made basket + foul — no explicit score confirm. Count 2 PTS + FTA Tommy?</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-review">Review</span><span class="no-stat">not logged</span></div></td></tr>
+
+        <tr class="pp-drill"><td colspan="4">5v5 Live — Transition / Two-Man Game (11:10–11:40)</td></tr>
+        <tr class="review-row" data-stats="AST review"><td class="pp-time">11:22:45</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Yes! Good pass, Andrew. Good pass, Andrew."</span><span class="pp-interp">"Yes!" + named pass implies score → AST Andrew logged. Confirm?</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-review">Review</span><span class="tag tag-ast">AST Andrew?</span></div></td></tr>
+        <tr data-stats="GBP"><td class="pp-time">11:22:53</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Way to be there, good defense, Andrew, good ball pressure."</span><span class="pp-interp">Andrew named explicitly for ball pressure</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-gbp">GBP Andrew</span></div></td></tr>
+        <tr data-stats="GBO"><td class="pp-time">11:30:54</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Locked out good Andrew. Hey, great box out, Andrew."</span><span class="pp-interp">Andrew named explicitly for box out</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-gbo">GBO Andrew</span></div></td></tr>
+        <tr data-stats="REB"><td class="pp-time">11:31:11</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good board, Oliver."</span><span class="pp-interp">Oliver rebound confirmed</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-reb">REB Oliver</span></div></td></tr>
+        <tr data-stats="GBP"><td class="pp-time">11:34:46</td><td class="pp-vid tbd">TBD</td><td><div class="pp-content"><span class="pp-raw">"Good job, Henry! Good pressure!"</span><span class="pp-interp">Henry named explicitly for ball pressure</span></div></td><td class="stat-cell"><div class="stat-tags"><span class="tag tag-gbp">GBP Henry</span></div></td></tr>
+
+        </tbody>
+      </table>
+      </div>
+      <p class="s-note">† Video timestamps (TBD) will be populated once anchor points are confirmed. Filter by stat type using pills above.</p>
+    </div>
+
+  </div><!-- end stats -->
 
 </main>
 
@@ -594,6 +969,23 @@
     content.classList.toggle('visible', !isOpen);
   }
 
+  function showStats(id, btn) {
+    document.querySelectorAll('.stats-panel').forEach(function(p){ p.classList.remove('active'); });
+    document.querySelectorAll('.stats-tab').forEach(function(b){ b.classList.remove('active'); });
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  function filterPP(stat, btn) {
+    document.querySelectorAll('.pp-pill').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('#pp-tbl tbody tr:not(.pp-drill)').forEach(function(row){
+      if (stat === 'all') { row.classList.remove('hidden'); return; }
+      var stats = row.dataset.stats || '';
+      row.classList.toggle('hidden', !stats.split(' ').includes(stat));
+    });
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
       var target = document.querySelector(this.getAttribute('href'));
@@ -605,7 +997,7 @@
     });
   });
 
-  var sections = ['philosophy', 'offense', 'defense'];
+  var sections = ['philosophy', 'offense', 'defense', 'stats'];
   var navLinks = document.querySelectorAll('.nav-pills a');
 
   function updateActive() {
