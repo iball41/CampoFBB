@@ -258,6 +258,17 @@
   .chevron { font-size: 0.75rem; color: rgba(255,255,255,0.6); transition: transform 0.25s ease; flex-shrink: 0; margin-left: 12px; }
   .scheme-toggle.open .chevron { transform: rotate(180deg); }
   .scheme-content { display: none; background: var(--white); padding: 20px 16px 16px; }
+
+  /* ── GAME FILM DUAL CAMERA ── */
+  .video-pair {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .video-pair .video-block { flex: 1; margin-top: 0 !important; }
+  @media (min-width: 768px) {
+    .video-pair { flex-direction: row; }
+  }
   .scheme-content.visible { display: block; }
 
   /* ── COURT ── */
@@ -974,32 +985,64 @@
       </button>
       <div class="scheme-content">
 
-        <div class="video-block">
-          <div class="video-eyebrow">Campo vs. Monte Vista (31-49)</div>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Campo vs. Monte Vista Game Film" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        <div class="video-eyebrow">Campo vs. Monte Vista (31-49)</div>
+        <div class="video-pair">
+          <div class="video-block">
+            <div class="video-eyebrow">Left Camera</div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/lmBVOlwEpUY" title="Campo vs. Monte Vista - Left Camera" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            </div>
+            <div class="video-hint">Tap video for fullscreen</div>
           </div>
-          <div class="video-hint">Tap video for fullscreen</div>
+          <div class="video-block">
+            <div class="video-eyebrow">Right Camera</div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/0gi2PDw8U90" title="Campo vs. Monte Vista - Right Camera" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            </div>
+            <div class="video-hint">Tap video for fullscreen</div>
+          </div>
         </div>
 
-        <div class="video-block" style="margin-top:24px;">
-          <div class="video-eyebrow">Campo vs. Vanden (47-52)</div>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Campo vs. Vanden Game Film" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        <div class="video-eyebrow" style="margin-top:28px;">Campo vs. Vanden (47-52)</div>
+        <div class="video-pair">
+          <div class="video-block">
+            <div class="video-eyebrow">Left Camera</div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/2cL8z2e55og" title="Campo vs. Vanden - Left Camera" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            </div>
+            <div class="video-hint">Tap video for fullscreen</div>
           </div>
-          <div class="video-hint">Tap video for fullscreen</div>
+          <div class="video-block">
+            <div class="video-eyebrow">Right Camera</div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/cHtS0qKL8_8" title="Campo vs. Vanden - Right Camera" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            </div>
+            <div class="video-hint">Tap video for fullscreen</div>
+          </div>
         </div>
 
-        <div class="video-block" style="margin-top:24px;">
-          <div class="video-eyebrow">Campo vs. Marin Catholic (39-51)</div>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Campo vs. Marin Catholic Game Film" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+        <div class="video-eyebrow" style="margin-top:28px;">Campo vs. Marin Catholic (39-51)</div>
+        <div class="video-pair">
+          <div class="video-block">
+            <div class="video-eyebrow">Left Camera</div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/cMbHU3Bi5Og" title="Campo vs. Marin Catholic - Left Camera" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            </div>
+            <div class="video-hint">Tap video for fullscreen</div>
           </div>
-          <div class="video-hint">Tap video for fullscreen</div>
+          <div class="video-block">
+            <div class="video-eyebrow">Right Camera</div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/sw2s77XFk1M" title="Campo vs. Marin Catholic - Right Camera" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            </div>
+            <div class="video-hint">Tap video for fullscreen</div>
+          </div>
         </div>
-      
-  </div>
-  
+
+      </div>
+    </div>
+  </div><!-- end gamefilm -->
+
 </main>
 
 <footer>
